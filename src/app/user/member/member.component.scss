@@ -1,0 +1,31 @@
+@import '~src/assets/scss/library.scss';
+
+.container{
+    width:100%;
+}
+.box{
+    @include flex();
+    margin:10vh 2%;
+    flex-direction:column;
+    width:20%;
+    height:40vh;
+    float:left;
+    border:1px solid $red;
+    cursor:pointer;
+    img{
+        width:80%;
+        height:10vh;
+    }
+}
+.active{
+    color:$red;
+}
+.box1, .box2{
+    @include flex();
+    flex-direction:column;
+    width:40%;
+    height:40vh;
+    float:left;
+    border:1px solid $red;
+    margin-left:20%;
+}

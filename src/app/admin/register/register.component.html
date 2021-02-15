@@ -1,0 +1,9 @@
+<form [formGroup]="registerGroup" (ngSubmit)="regist()">
+    <h1>Register</h1>
+    <input type="text"  formControlName="mail" placeholder="Mail" value='name'>
+    <input type="text"  formControlName="username" placeholder="Username" value='name'>
+    <input type="number"  formControlName="gender" placeholder="Gender" value='1'>
+    <input type="text"  formControlName="password" placeholder="Password" value='name'>
+    <input type="text"  formControlName="repeat" placeholder="Repeat Password" value='name'>
+    <button type="submit">Sign up!</button>
+</form>

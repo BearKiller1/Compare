@@ -1,0 +1,8 @@
+<form [formGroup]="AddProdGroup" (ngSubmit)="addProd()">
+    <h1>Register</h1>
+    <input type="text"  formControlName="name" placeholder="name" value='name'>
+    <input type="number"  formControlName="price" placeholder="price" value='name'>
+    <input type="text"  formControlName="desc" placeholder="desc" value='1'>
+    <input type="text"  formControlName="img" placeholder="Image Link" value='name'>
+    <button type="submit">Add Product</button>
+</form>

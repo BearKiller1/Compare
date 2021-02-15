@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="box" *ngFor="let item of data" [routerLink]="['../detail',item.id]">
+        <h1>{{item.name}}</h1>
+        <img [src]="item.img">
+
+        <p>{{item.price}}</p>
+        <p>{{item.desc}}</p>
+       
+    </div>
+</div>

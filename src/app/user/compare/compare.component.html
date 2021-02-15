@@ -1,0 +1,19 @@
+<div class="sideMenu">
+    <div class="box"  *ngFor="let item of prod">
+        <img [src]="item.img" alt="" (click)="output(item.id)">
+        <p>{{item.name}}</p>
+        <button [routerLink]="['../detail',item.id]">Detail</button>
+    </div>
+</div>
+
+<div class='box1' >
+    <p>{{prod1.name}}</p>
+    <p>{{prod1.price}}</p>
+    <p>{{prod1.desc}}</p>
+</div>
+
+<div class='box1' >
+    <p>{{prod2.name}}</p>
+    <p>{{prod2.price}}</p>
+    <p>{{prod2.desc}}</p>
+</div>
