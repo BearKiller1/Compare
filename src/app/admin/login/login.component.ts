@@ -11,6 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  api_key:any;
+
   userGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
@@ -26,11 +28,9 @@ export class LoginComponent implements OnInit {
   }
   log(){
     var data = this.userGroup.value;
-    var api_key = localStorage.getItem("token");
-    this.Obj.login(data.username, data.pwd);
-    
-    if(api_key){
-      alert(api_key);
+    this.api_key = this.Obj.login(data.username, data.password);
+
+    if(this.api_key){
       localStorage.removeItem("token");
       this.router.navigate(['../dashboard'], {relativeTo:this.route});
     }
